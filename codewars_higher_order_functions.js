@@ -24,6 +24,13 @@ The strings representing whether someone is a GitHub admin will always be format
 The strings representing a given language will always be formatted in the same way (e.g. 'JavaScript' will always be formatted with upper-case 'J' and 'S'.
 */
 
-function findAdmin(list, lang) {
-  // thank you for checking out the Coding Meetup kata :)
+const findAdmin = (list, lang) => {
+  let jsDevs = [];
+  for(let i = 0; i < list.length; i++) {
+    if(list[i].language === lang && list[i].githubAdmin === 'yes') {
+      jsDevs.push(list[i]);
+    }
+  }
+
+  return jsDevs;
 }
